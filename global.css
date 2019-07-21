@@ -1,0 +1,18 @@
+body {
+    font-family: 'Prompt', sans-serif;
+    background-color: lightblue
+}
+
+#initialPart {
+    text-align: center;
+    background-color: beige;
+    margin-left : 30%;
+    margin-right : 30%; 
+    width: 40%;
+    max-width: 600px;
+    
+}
+
+
+  
+  
