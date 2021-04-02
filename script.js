@@ -1,6 +1,6 @@
 var wordArray = [];
 var currentWord = 0;
-condition = false;
+var condition = false;
 
 $(document).ready(function(){ 
     /* title letters*/
@@ -11,30 +11,38 @@ $(document).ready(function(){
         splitLetters(words[i]);
         
     }
-    setInterval(changeWord,3000)
+    changeWord();
+    setInterval(changeWord,9000);
 
 }) 
 
 
 
-function changeWord() {
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function changeWord() {
     condition = !condition;
-    letters =  wordArray[0]
-    for (let i=0; i< letters.length; i+=2) {
-        if (letters[i].innerHTML != " " && letters[i].innerHTML != "\n")
-        {
-            if (condition == true) {
-                console.log(letters[i].innerHTML);
-                letters[i].innerHTML = CaesarCipher(letters[i].innerHTML,6);
-            } else {
-                letters[i].innerHTML = CaesarCipher(letters[i].innerHTML,-6);
-            } 
+    letters =  wordArray[0];
+    for (let i = 0; i < letters.length; i++) {
+        if (letters[i].innerHTML != " " && letters[i].innerHTML != "\n"){
+            for (let j = 0; j < 2; j++) {
+                if (condition == true) {
+                    letters[i].innerHTML = CaesarCipher(letters[i].innerHTML,1);
+                } else {
+                    letters[i].innerHTML = CaesarCipher(letters[i].innerHTML,-1);
+                } 
+                await sleep(120);
+            }
         }
     }
     console.log("Cambio "+condition);
 }
 
-function CaesarCipher(str, num) {
+
+ function CaesarCipher(str, num) {
     var charcode = 0;
     charcode = (str[0].charCodeAt()) + num;
     return String.fromCharCode(charcode);
