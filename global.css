@@ -1,18 +1,40 @@
-body {
+body, html {
+    height: 100%;
+    margin: 0;
     font-family: 'Prompt', sans-serif;
-    background-color: lightblue
+    /*background-color: grey;*/
 }
+
 
 #initialPart {
-    text-align: center;
-    background-color: beige;
-    margin-left : 30%;
-    margin-right : 30%; 
-    width: 40%;
-    max-width: 600px;
+    /* Immagine usata */
+    background-image: url("desert.jpeg");
+
+     /* Altezza al massimo */
+    height: 100%; 
     
+    /* Centrare l'immagine e rappresentarla carina */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Filtrare di grigio l'immagine*/
+    filter: grayscale(100%);
 }
 
+.h1 {
+    font-size: 6em;
+}
 
+.h2 {
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+#initialDescription {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
   
   
