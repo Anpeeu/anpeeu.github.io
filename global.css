@@ -9,32 +9,28 @@ body, html {
 #initialPart {
     /* Immagine usata */
     background-image: url("desert.jpeg");
+    filter: grayscale(100%);
 
      /* Altezza al massimo */
     height: 100%; 
-    
     /* Centrare l'immagine e rappresentarla carina */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     /* Filtrare di grigio l'immagine*/
-    filter: grayscale(100%);
+    text-align: center;
 }
 
-.h1 {
-    font-size: 800%;
-}
 
-.h2 {
-    font-size: 280%;
-    text-transform: uppercase;
-}
 
-#initialDescription {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.left-icon-holder {
+    position:relative;
 }
-  
-  
+.fa-brands, .fa-solid{
+    position:absolute;
+    line-height: 24px;
+    top:50%;
+    margin-top: -19px; /* Half of line height to keep left middle postion of container */
+    left: 13px;
+    font-size:40px
+}
