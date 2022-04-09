@@ -2,23 +2,27 @@ body, html {
     height: 100%;
     margin: 0;
     font-family: 'Prompt', sans-serif;
-    /*background-color: grey;*/
+    background-color: gray;
+    background-image: url("../img/desert.jpeg");
+    filter: grayscale(100%);
+    text-align: center;
 }
 
 
 #initialPart {
     /* Immagine usata */
-    background-image: url("desert.jpeg");
-    filter: grayscale(100%);
+    
+    /*background-image: url("desert.jpeg");
+    filter: grayscale(100%);*/
 
-     /* Altezza al massimo */
-    height: 100%; 
+    /* Altezza al massimo */
+    height: auto; 
     /* Centrare l'immagine e rappresentarla carina */
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto;
     /* Filtrare di grigio l'immagine*/
-    text-align: center;
+    
 }
 
 
